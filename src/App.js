@@ -1,8 +1,9 @@
-
+import {Header,AboutMe} from './Components'
 function App() {
   return (
     <div className="App">
-    <h1>Hi</h1>
+      <Header/>
+    <AboutMe/>
     </div>
   );
 }
