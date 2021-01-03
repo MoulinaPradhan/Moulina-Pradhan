@@ -11,3 +11,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.floatingText{
+  position:absolute;
+  animation: bounce 1s ease-in-out infinite alternate;
+}
+@keyframes bounce {
+  0% {
+    transfrom: translateY(0px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(50px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+}

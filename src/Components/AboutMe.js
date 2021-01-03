@@ -3,7 +3,7 @@ import {Container,Row,Col,Image} from 'react-bootstrap';
 import Moulina from "../Images/moulina.jpeg"
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import {Typography,Grid,createMuiTheme,Box} from '@material-ui/core';
-import { Frame, Scroll, useCycle } from "framer"
+
 
 const defaultTheme = createMuiTheme({})
 const { breakpoints, typography: { pxToRem } } = defaultTheme
@@ -24,6 +24,12 @@ const useStyles = makeStyles((theme) =>
     spanText:{
         color:'violet'
     },
+    spacer:{
+marginTop:'5%',
+[breakpoints.down("xs")]: {
+  marginTop: "10%"
+},
+    },
     heading:{
         marginTop:"5rem",
         [breakpoints.down("xs")]: {
@@ -37,12 +43,12 @@ const AboutMe = () => {
     const classes = useStyles();
  
     return (
-        <Container fluid>
+       <Container className={classes.spacer}>
 
-            <Row className="justify-content-md-center">
-            <Col xs={5} md={4}>
+<Row className="justify-content-md-center">
+<Col xs={5} md={4}>
             
-              <Box  display="flex"
+  <Box  display="flex"
         alignItems="center"
         p={1}
         m={1}>
