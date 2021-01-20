@@ -1,4 +1,5 @@
 import React from 'react'
+import {Row,Col,Image} from 'react-bootstrap';
 import {Doughnut} from 'react-chartjs-2';
 import {Typography,Container,Grid,createMuiTheme,Box} from '@material-ui/core';
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
@@ -95,44 +96,22 @@ const Skills = () => {
       });
     return (
         <Container fluid>
+          <Row><Col>
         <Box display="flex" justifyContent="center" alignItems="center"fluid >
         <Box className={classes.boxWidth}>
-        {/* <Wave text="EXAMPLE TEXT" className={classes.heading} />
-        <Random text="EXAMPLE TEXT" />
-        <Wave text="EXAMPLE TEXT" effect="stretch" effectChange={2.2} />
- 
-<Random
-  text="Pola"
- effect="verticalFadeOut"
-  effectDirection="right"
-  effectChange={3.0}
-/> */}
-        {/* <h1>
-      <TextTransition
-        text={ TEXTS[index % TEXTS.length] }
-        springConfig={ presets.slow } inline={true}
-      />
-    </h1> */}
  <h2 className={classes.heading}>
 <Random
   text="Skills"
  effect="pop"
   effectDirection="up"
   effectChange={0.6}
-/></h2>
+/>
+</h2>
         <Doughnut data={data}  options={options} animateRotate={true}/>     
         </Box>
       
-<h1 className="floatingText" style={{top:'150%',left:'5%'}}>
-   Bootstrap<i class="fab fa-bootstrap"></i>
-   <i class="fas fa-code"></i>
-   <i class="fab fa-html5"></i>
-   <i class="fab fa-react"></i>
-   <i class="fab fa-java"></i>
-   <i class="fab fa-node"></i>
-</h1>
 </Box>
-        
+</Col></Row>
         </Container>
     )
 }
