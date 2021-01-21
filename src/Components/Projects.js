@@ -20,7 +20,7 @@ const TEXTS = [
   ];
 const useStyles = makeStyles((theme) =>
   createStyles({
-    root: {  maxWidth: 345,},
+    root: {  maxWidth: 345, height:400},
     heading: {
       fontSize:50,
       textAlign:"center",
@@ -61,6 +61,11 @@ const Projects = () => {
       <Card className={classes.root}>
       <CardActionArea>
       <HoverVideoPlayer 
+      className="player-wrapper"
+      style={{
+        height:'60%',
+        display:isFlipped ? 'none' : ''
+      }}
       videoSrc={demo}
       pausedOverlay={
         <img src="thumbnail-image.jpg" alt="" />
@@ -112,12 +117,7 @@ const Projects = () => {
       </CardActionArea>
       <CardActions>
         
-        <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
+      
       </CardActions>
     </Card>
         </div>
