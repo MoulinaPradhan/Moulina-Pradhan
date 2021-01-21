@@ -7,17 +7,12 @@ import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import ReactPlayer from 'react-player'
 import demo from '../videos/demo.mp4'
 import HoverVideoPlayer from 'react-hover-video-player';
-
+import Tilt from 'react-parallax-tilt';
+import { FirebaseEcomerce, CatchMeIfYouCan} from '../projects'
 
 const defaultTheme = createMuiTheme({})
 const { breakpoints, typography: { pxToRem } } = defaultTheme
 
-const TEXTS = [
-    "Forest",
-    "Building",
-    "Tree",
-    "Color"
-  ];
 const useStyles = makeStyles((theme) =>
   createStyles({
     root: {  maxWidth: 345, height:400},
@@ -55,15 +50,19 @@ const useStyles = makeStyles((theme) =>
 const Projects = () => {
     const classes=useStyles();
     const [isFlipped, setFlipped] = useState(false);
+   
+    
  
+    {/*project 1*/}
     const front = (
       <div onClick={() => setFlipped(x => !x)}>
+    
       <Card className={classes.root}>
       <CardActionArea>
       <HoverVideoPlayer 
       className="player-wrapper"
       style={{
-        height:'60%',
+        height:'200px',
         display:isFlipped ? 'none' : ''
       }}
       videoSrc={demo}
@@ -73,8 +72,7 @@ const Projects = () => {
       loadingOverlay={
         <div className="loading-spinner-overlay" />
       }
-    
-    hidden/>
+    />
   {/* <ReactPlayer url={demo} width={"100%"} height={"200px"} playing/>  */}
        
         <CardContent>
@@ -97,6 +95,7 @@ const Projects = () => {
        
       </CardActions>
     </Card>
+   
     </div>
     );
  
@@ -122,16 +121,17 @@ const Projects = () => {
     </Card>
         </div>
     );
+
     return (
         <>
         <Container fluid>
         <Row className={classes.boxWidth}>
         <Col md={4} xs={6}>
-        
-        <FlipCard isFlipped={isFlipped} front={front} back={back}/>
-    
-        </Col>
-      
+      <CatchMeIfYouCan/>
+       </Col>
+       <Col md={4} xs={6}>
+       <FirebaseEcomerce/>
+         </Col>
         </Row>
         </Container>
         </>
