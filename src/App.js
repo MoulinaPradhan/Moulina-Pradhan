@@ -1,4 +1,5 @@
-import {Header,AboutMe,Skills,Projects} from './Components'
+import {Header,ContactMe,AboutMe,Skills,Projects, Education} from './Components'
+
 function App() {
   return (
     <div className="App">
@@ -6,6 +7,8 @@ function App() {
     <AboutMe/>
     <Skills/>
     <Projects/>
+    <Education/>
+    <ContactMe/>
     </div>
   );
 }

@@ -55,10 +55,10 @@ const FirebaseEcomerce = () => {
       
         <Card className={classes.root}>
         <CardActionArea>
-        <HoverVideoPlayer 
+        <HoverVideoPlayer fluid
         className="player-wrapper"
         style={{
-          height:'200px',
+          height:'auto',
           display:isFlipped ? 'none' : ''
         }}
         videoSrc={Emart}

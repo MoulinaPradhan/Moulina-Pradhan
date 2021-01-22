@@ -49,87 +49,16 @@ const useStyles = makeStyles((theme) =>
 
 const Projects = () => {
     const classes=useStyles();
-    const [isFlipped, setFlipped] = useState(false);
-   
-    
- 
-    {/*project 1*/}
-    const front = (
-      <div onClick={() => setFlipped(x => !x)}>
-    
-      <Card className={classes.root}>
-      <CardActionArea>
-      <HoverVideoPlayer 
-      className="player-wrapper"
-      style={{
-        height:'200px',
-        display:isFlipped ? 'none' : ''
-      }}
-      videoSrc={demo}
-      pausedOverlay={
-        <img src="thumbnail-image.jpg" alt="" />
-      }
-      loadingOverlay={
-        <div className="loading-spinner-overlay" />
-      }
-    />
-  {/* <ReactPlayer url={demo} width={"100%"} height={"200px"} playing/>  */}
-       
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            Catch Me
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-          A simple pet project 😀made to see if one can catch the jelly fish🦑 under the sea. HTML,CSS and JavaScript has been used.
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-      <Link  target="_blank" href="https://moulinapradhan.github.io/catch_me_sea_version/" color="inherit">
-    { "Project Link" }
-  </Link>
-
-  <Link  target="_blank" href="https://moulinapradhan.github.io/catch_me_sea_version/" color="inherit">
-    { "Github" }
-  </Link>
-       
-      </CardActions>
-    </Card>
-   
-    </div>
-    );
- 
-    const back = (
-        <div onClick={() => setFlipped(x => !x)}>
-          <Card className={classes.root}>
-      <CardActionArea>
-        
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            Lizard
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        
-      
-      </CardActions>
-    </Card>
-        </div>
-    );
+  
 
     return (
         <>
         <Container fluid>
         <Row className={classes.boxWidth}>
-        <Col md={4} xs={6}>
+        <Col md={4} xs={12}>
       <CatchMeIfYouCan/>
        </Col>
-       <Col md={4} xs={6}>
+       <Col md={4} xs={12}>
        <FirebaseEcomerce/>
          </Col>
         </Row>
