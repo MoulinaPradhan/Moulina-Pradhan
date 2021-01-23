@@ -5,6 +5,7 @@ import {Typography,Container,Grid,createMuiTheme,Box} from '@material-ui/core';
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import TextTransition, { presets } from "react-text-transition";
 import { Wave,Random } from 'react-animated-text';
+import {AnimatedOnScroll} from "react-animated-css-onscroll";
 
 const defaultTheme = createMuiTheme({})
 const { breakpoints, typography: { pxToRem } } = defaultTheme
@@ -107,6 +108,7 @@ const Skills = () => {
   effectChange={0.6}
 />
 </h2>
+        
         <Doughnut data={data}  options={options} animateRotate={true}/>     
         </Box>
       
