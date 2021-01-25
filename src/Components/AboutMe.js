@@ -5,6 +5,10 @@ import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import {Typography,Grid,createMuiTheme,Box} from '@material-ui/core';
 
 
+import RellaxWrapper from 'react-rellax-wrapper'
+
+
+
 const defaultTheme = createMuiTheme({})
 const { breakpoints, typography: { pxToRem } } = defaultTheme
 
@@ -43,6 +47,7 @@ const AboutMe = () => {
     const classes = useStyles();
  
     return (
+     
        <Container className={classes.spacer}>
 
 <Row className="justify-content-md-center">
@@ -77,7 +82,9 @@ const AboutMe = () => {
               </Box>
                   </Col> 
             </Row>
+           
         </Container>
+       
     )
 }
 

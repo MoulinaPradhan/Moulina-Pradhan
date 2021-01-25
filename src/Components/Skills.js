@@ -7,6 +7,8 @@ import TextTransition, { presets } from "react-text-transition";
 import { Wave,Random } from 'react-animated-text';
 import {AnimatedOnScroll} from "react-animated-css-onscroll";
 
+import RellaxWrapper from 'react-rellax-wrapper'
+
 const defaultTheme = createMuiTheme({})
 const { breakpoints, typography: { pxToRem } } = defaultTheme
 
@@ -96,6 +98,7 @@ const Skills = () => {
         );
       });
     return (
+      <RellaxWrapper speed={9} percentage={0.5}  >
         <Container fluid>
           <Row><Col>
         <Box display="flex" justifyContent="center" alignItems="center"fluid >
@@ -115,6 +118,7 @@ const Skills = () => {
 </Box>
 </Col></Row>
         </Container>
+        </RellaxWrapper>
     )
 }
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link, animateScroll as scroll } from "react-scroll";
 // import {LinkContainer} from 'react-router-bootstrap'
 import {Nav,Navbar,Container} from 'react-bootstrap';
 const Header = () => {
@@ -12,10 +13,22 @@ const Header = () => {
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="ml-auto">
     {/* <LinkContainer to="/cart"> */}
-      <Nav.Link><i className="fas fa-shopping-cart"></i>Cart</Nav.Link>
+      <Nav.Link><i className="fas fa-shopping-cart"></i>Cart
+      <Link
+    activeClass="active"
+    to="projects"
+    spy={true}
+    smooth={true}
+    offset={10}
+    duration={1000}
+>
+  lokakak
+</Link>
+      </Nav.Link>
       {/* </LinkContainer> */}
       {/* <LinkContainer to="/login"> */}
-      <Nav.Link><i className="fas fa-user"></i>Sign In</Nav.Link>
+      <Nav.Link><i className="fas fa-user">
+        </i>Sign In</Nav.Link>
       {/* </LinkContainer>  */}
     </Nav>
    

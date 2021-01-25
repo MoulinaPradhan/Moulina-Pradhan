@@ -45,7 +45,7 @@ export default function Education() {
   const classes = useStyles();
 
   return (
-      <div  className={classes.startingPosition}>
+      <div  className={classes.startingPosition} id="education">
            <h2 className={classes.heading}>
 <Random
   text="Education"

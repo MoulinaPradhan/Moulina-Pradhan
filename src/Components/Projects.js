@@ -11,12 +11,15 @@ import Tilt from 'react-parallax-tilt';
 import { FirebaseEcomerce, CatchMeIfYouCan} from '../projects'
 import Aos from 'aos';
 import "aos/dist/aos.css";
+
+import RellaxWrapper from 'react-rellax-wrapper'
+
 const defaultTheme = createMuiTheme({})
 const { breakpoints, typography: { pxToRem } } = defaultTheme
 
 const useStyles = makeStyles((theme) =>
   createStyles({
-    root: {  maxWidth: 345, height:400},
+    root: {  maxWidth: 345, height:400,zIndex:10},
     heading: {
       fontSize:50,
       textAlign:"center",
@@ -57,8 +60,10 @@ const Projects = () => {
       }, [])
 
     return (
-        <>
-        <Container fluid data-aos="ease-in">
+        <>   
+        <RellaxWrapper speed={9} percentage={0.8}  >
+        <Container fluid data-aos="ease-in" id="projects">
+     
         <Row className={classes.boxWidth}>
         <Col md={4} xs={12}>
       <CatchMeIfYouCan/>
@@ -67,7 +72,9 @@ const Projects = () => {
        <FirebaseEcomerce/>
          </Col>
         </Row>
+
         </Container>
+        </RellaxWrapper>
         </>
     )
 }
