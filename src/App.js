@@ -7,6 +7,9 @@ import Wave from 'react-wavify'
 // import { ParallaxProvider,Parallax, Background,Image } from 'react-scroll-parallax';
 import SmokeElement from "smoke-effect-react";
 import Background from './Background'
+import PieCharts from './Components/PieCharts';
+import Dountchart from './Components/Dountchart';
+import Salesdonut from './Components/Salesdonut';
 
 function App() {
 
@@ -17,8 +20,9 @@ function App() {
     
     <AboutMe/>
     
-    <AnimatedOnScroll animationIn="rollIn">
-    <Skills />
+    <AnimatedOnScroll animationIn="bounceDown" duration="1">
+    {/* <Skills /> */}
+    <PieCharts/>
     </AnimatedOnScroll>
   
     <AnimatedOnScroll animationIn="bounceInUp">
@@ -28,15 +32,9 @@ function App() {
    
     <Education/>
     </AnimatedOnScroll>
- {/* <Background/> */}
+    <shooting-stars image="./star.png" height="'10px'" width="10" min-speed="10" max-speed="50" num="10"></shooting-stars>
     <ContactMe/>
-    {/* <Background/> */}
-    {/* <SmokeElement
-          src=""
-          opacity="1"
-          smokeSrc="https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/Smoke-Element.png"
-          smokeOpacity="0.5"
-        /> */}
+  
    
     </div>
   );
