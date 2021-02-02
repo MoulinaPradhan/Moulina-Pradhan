@@ -17,10 +17,10 @@ function App() {
     <div className="App">
 
       <Header/>
+      
+     <AboutMe/>
     
-    <AboutMe/>
-    
-    <AnimatedOnScroll animationIn="bounceDown" duration="1">
+    <AnimatedOnScroll animationIn="bounceDown" duration="1"> 
     {/* <Skills /> */}
     <PieCharts/>
     </AnimatedOnScroll>
@@ -29,12 +29,13 @@ function App() {
     <Projects />
     </AnimatedOnScroll>
     <AnimatedOnScroll animationIn="bounceInLeft" animationOut="fadeOut">
-   
+ 
     <Education/>
     </AnimatedOnScroll>
     <shooting-stars image="./star.png" height="'10px'" width="10" min-speed="10" max-speed="50" num="10"></shooting-stars>
     <ContactMe/>
   
+
    
     </div>
   );
