@@ -8,8 +8,8 @@ import Wave from 'react-wavify'
 import SmokeElement from "smoke-effect-react";
 import Background from './Background'
 import PieCharts from './Components/PieCharts';
-import Dountchart from './Components/Dountchart';
-import Salesdonut from './Components/Salesdonut';
+
+
 
 function App() {
 
