@@ -4,6 +4,7 @@ import ReactContactForm from 'react-mail-form';
 import { makeStyles } from '@material-ui/core/styles';
 import {Paper, Grid,TextField} from '@material-ui/core';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import emailjs from 'emailjs-com';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,14 +23,19 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ContactMe() {
   const classes = useStyles();
-  ///demo
-  const Mailto = ({ email, subject = '', body = '', children }) => {
-    let params = subject || body ? '?' : '';
-    if (subject) params += `subject=${encodeURIComponent(subject)}`;
-    if (body) params += `${subject ? '&' : ''}body=${encodeURIComponent(body)}`;
-  
-    return <a href={`mailto:${email}${params}`}>{children}</a>;
-  };
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_hye557c', 'template_cw4rzyn', e.target, 'user_QsAWWOgOIJWurzAsRI3Je')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+
+      e.target.reset();
+  }
 
   return (
     <div className={classes.root}>
@@ -38,25 +44,24 @@ export default function ContactMe() {
       
         <Grid item xs={6} fluid>
         
-          <form className={classes.root} noValidate autoComplete="off"  action="mailto:pmoulina76@gmail.com" enctype="multipart/form-data" method="post">
+          <form className={classes.root} noValidate autoComplete="off" onSubmit={sendEmail}>
           <Grid>
              <TextField id="subject" name="subject" label="subject" required/>
           </Grid>
          
          <Grid>
-           <TextField id="email" name="email" label="Email" required></TextField>
+           <TextField id="name" name="name" label="Email" required></TextField>
         </Grid> 
 
         <Grid>
-          <TextField id="Message" label="Message" required  name="body" id="body" />
+     
+          <TextField id="message" label="Message" required  name="message" />
 
           </Grid>
           
           <div><input type="submit" value="Create Email" class="button is-primary"/></div>
         </form>
-        <Mailto email="foo@bar.baz" subject="Hello & Welcome" body="Hello world!">
-    Mail me!
-  </Mailto>
+      
         </Grid>
         <Grid item xs={6}>
          <Grid>
