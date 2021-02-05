@@ -8,6 +8,10 @@ import emailjs from 'emailjs-com';
 import ContactMeForm from './ContactMeForm';
 import Wave from 'react-wavify'
 import Snow from 'react-snow-effect'
+import ToggleAbout from '../helpers/ToggleAbout';
+
+
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -49,24 +53,20 @@ export default function ContactMe() {
     <div className={classes.root}>
      
       <Grid container className={classes.background}>
-      <Snow/>
+      {/* <Snow/> */}
+     
       <Grid md={12}>
        <h3> Contact Me</h3> 
          </Grid>   
      <ContactMeForm/>
-    
+     <Box display="flex" flexDirection="row-reverse">
+        <Box>
+ <ToggleAbout/>
+   </Box>
+   </Box>
     
       </Grid>
-      <Box display="flex" flexDirection="row-reverse">
-        <Box>
-   <img  src="https://www.flaticon.com/svg/vstatic/svg/621/621666.svg?token=exp=1612460795~hmac=1f595d5550ff8661d15aa3e625a04da9"
-   height="100"
-   width ="100"
-
-   mt={-5}
-   />
-   </Box>
-   </Box>
+     
       <Wave mask="url(#mask)" fill="#1277b0" options={{
           height: 20,
           amplitude: 50,
