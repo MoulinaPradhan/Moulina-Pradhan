@@ -1,15 +1,13 @@
-import React,{useState} from 'react'
-import {REACT_APP_EMAILJS_RECEIVER,REACT_APP_EMAILJS_USERID,} from 'emailjs-com'
-import ReactContactForm from 'react-mail-form';
+import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import {Paper, Grid,TextField, Box} from '@material-ui/core';
-import MailOutlineIcon from '@material-ui/icons/MailOutline';
+
 import emailjs from 'emailjs-com';
 import ContactMeForm from './ContactMeForm';
 import Wave from 'react-wavify'
 import Snow from 'react-snow-effect'
 import ToggleAbout from '../helpers/ToggleAbout';
-
+import {Random } from 'react-animated-text';
 
 
 
@@ -30,40 +28,39 @@ const useStyles = makeStyles((theme) => ({
     // backgroundColor:'black',
     backgroundImage:'https://codemyui.com/wp-content/uploads/2019/06/Shooting-Star-Background-in-Pure-CSS-1.gif',
     padding: theme.spacing(3),
-  }
+  },
+  startingPosition:{
+    marginTop:'1%',
+  
+}
 }));
 
 export default function ContactMe() {
   const classes = useStyles();
 
-  function sendEmail(e) {
-    e.preventDefault();
-
-    emailjs.sendForm('service_hye557c', 'template_cw4rzyn', e.target, 'user_QsAWWOgOIJWurzAsRI3Je')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
-
-      e.target.reset();
-  }
-
   return (
-    <div className={classes.root}>
+    <div id="contact" className={classes.startingPosition}>
+     <h2 className={classes.heading} align="center">
+<Random
+  text="Experiences"
+ effect="pop"
+  effectDirection="up"
+  effectChange={0.6}
+/>
+</h2>
+      <Grid container>
+
      
-      <Grid container className={classes.background}>
-      {/* <Snow/> */}
-     
-      <Grid md={12}>
-       <h3> Contact Me</h3> 
-         </Grid>   
-     <ContactMeForm/>
-     <Box display="flex" flexDirection="row-reverse">
+      <Grid md={12} className={classes.startingPosition}>
+      <ContactMeForm/>
+      
+     {/* <Box display="flex" flexDirection="row-reverse">
         <Box>
  <ToggleAbout/>
    </Box>
-   </Box>
+   </Box> */}
+         </Grid>   
+    
     
       </Grid>
      

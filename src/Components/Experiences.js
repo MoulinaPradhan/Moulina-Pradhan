@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.secondary.main,
   },
   startingPosition:{
-      marginTop:'40%'
+      marginTop:'10%'
   }
 }));
 
@@ -86,8 +86,8 @@ export default function Experiences() {
   const [secondary, setSecondary] = React.useState(false);
 
   return (
-      <div  className={classes.startingPosition} id="education">
-           <h2 className={classes.heading}>
+      <div  className={classes.startingPosition} id="experiences">
+<h2 className={classes.heading}>
 <Random
   text="Experiences"
  effect="pop"
@@ -111,7 +111,7 @@ export default function Experiences() {
            Bipolar Factory
             </Typography>
             </Link>
-            <Typography variant="body2">September(2020) - November(2020) </Typography><br/>
+            <Typography variant="body2">Frontend Developer Intern  (September(2020) - November(2020)) </Typography><br/>
             
             <List >
             <ListItem>
@@ -220,16 +220,39 @@ export default function Experiences() {
             SAWO Labs Future of UX Hackathon  
             </Typography>
             </Link>
-            <Typography variant="body2">January(2020) - February(2020) </Typography><br/>
-            <Typography  textAlign="right">
-                
-                I was a student of Kendriya Vidyalaya I.O.C Haldia.I was also the school's captain for the session (2018-19).
-                Apart from Academics I used to take part in various co-curricular activities like painting, singing etc.
-                I also clerified as a Rajya Purashkar guide, in the session(2017-18).
-            </Typography>
-                <br/>
-                AISSCE(2019): 86 % <br/>
-                Assce(2017) : 10 CGPA
+            <Typography variant="body2">Finalist (Team KIRA) (January(2020) - February(2020)) </Typography><br/>
+            <ListItem>
+               <StyledBadge
+        overlap="circle"
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'right',
+        }}
+        variant="dot"
+      >
+         </StyledBadge>
+                   
+                  <ListItemText
+                    primary="Worked on a real life project to integrate SAWO Api"
+                    secondary={secondary ? 'Secondary text' : null}
+                  />
+                </ListItem>
+                <ListItem>
+               <StyledBadge
+        overlap="circle"
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'right',
+        }}
+        variant="dot"
+      >
+         </StyledBadge>
+                   
+                  <ListItemText
+                    primary="Our Initial Concept Document was selected among 240+ participate all over India"
+                    secondary={secondary ? 'Secondary text' : null}
+                  />
+                </ListItem>
 
           </Paper>
         </TimelineContent>

@@ -11,6 +11,7 @@ import Tilt from 'react-parallax-tilt';
 import { FirebaseEcomerce, CatchMeIfYouCan} from '../projects'
 import Aos from 'aos';
 import "aos/dist/aos.css";
+import { Wave,Random } from 'react-animated-text';
 
 import RellaxWrapper from 'react-rellax-wrapper'
 
@@ -34,7 +35,7 @@ const useStyles = makeStyles((theme) =>
     boxWidth:{
         width:'100%',
         height:'1rem',
-        marginTop:'48rem',
+        marginTop:'5rem',
         [breakpoints.down("xs")]: {
             marginTop: "15rem"
           },
@@ -43,7 +44,9 @@ const useStyles = makeStyles((theme) =>
       height: 200,
       width:'100%',
     },
- 
+    startingPosition:{
+      marginTop:'10%'
+  },
     floatingText:{
         position:"absolute"
     }
@@ -61,10 +64,17 @@ const Projects = () => {
 
     return (
         <>   
-        <RellaxWrapper speed={9} percentage={0.8}  >
-        <Container fluid data-aos="ease-in" id="projects">
-     
-        <Row className={classes.boxWidth}>
+        
+        <Container fluid data-aos="ease-in" id="projects" className={classes.startingPosition}>
+        <h2 className={classes.heading}>
+<Random
+  text="Projects"
+ effect="pop"
+  effectDirection="up"
+  effectChange={0.6}
+/>
+</h2>
+<Row className={classes.boxWidth}>
         <Col md={4} xs={12}>
       <CatchMeIfYouCan/>
        </Col>
@@ -74,7 +84,7 @@ const Projects = () => {
         </Row>
 
         </Container>
-        </RellaxWrapper>
+       
         </>
     )
 }

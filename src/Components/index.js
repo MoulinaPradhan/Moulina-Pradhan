@@ -5,7 +5,7 @@ import Projects from './Projects'
 import ContactMe from './ContactMe'
 import Education from './Education'
 import Experiences from './Experiences'
-
+import ContactMeForm from './ContactMeForm'
 
 export  {Header,
     Projects,
@@ -13,4 +13,5 @@ export  {Header,
     ContactMe,
     Education,
     Experiences,
+    ContactMeForm,
 AboutMe};

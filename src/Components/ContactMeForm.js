@@ -1,5 +1,5 @@
-import React,{useState} from 'react'
-import {REACT_APP_EMAILJS_RECEIVER,REACT_APP_EMAILJS_USERID,} from 'emailjs-com'
+import React from 'react'
+
 import ReactContactForm from 'react-mail-form';
 import { makeStyles } from '@material-ui/core/styles';
 import {Paper, TextareaAutosize, Grid,TextField, Box,Link,CardContent,Typography,Divider,Container,Card,Button} from '@material-ui/core';
@@ -9,9 +9,9 @@ import emailjs from 'emailjs-com';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    "& .MuiTextField-root": {
-        margin: theme.spacing(1)
-      }
+    // "& .MuiTextField-root": {
+    //     margin: theme.spacing(1)
+    //   }
 
   },
   paper: {
@@ -50,7 +50,7 @@ export default function ContactMeForm() {
   return (
     <>
       <Container
-        className={classes.cardContainer}
+        className={classes.root}
         maxWidth="sm"
       >
         
@@ -79,7 +79,7 @@ export default function ContactMeForm() {
           <TextField
           
             fullWidth
-            autoFocus
+            // autoFocus
           id="name"
             label="Name"
             margin="normal"

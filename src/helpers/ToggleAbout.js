@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import SpeedDial from '@material-ui/lab/SpeedDial';
@@ -19,9 +19,8 @@ const useStyles = makeStyles((theme) => ({
   },
   speedDial: {
     position: 'absolute',
-    bottom: theme.spacing(0),
+    bottom: theme.spacing(2),
     right: theme.spacing(2),
-   
   },
 }));
 
@@ -70,9 +69,7 @@ export default function ToggleAbout() {
             onClick={handleClose}
           />
         ))}
-
       </SpeedDial>
-     
     </div>
   );
 }

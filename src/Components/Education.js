@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.secondary.main,
   },
   startingPosition:{
-      marginTop:'40%'
+      marginTop:'-45%'
   }
 }));
 

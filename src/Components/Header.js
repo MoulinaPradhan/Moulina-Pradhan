@@ -1,35 +1,44 @@
 import React from 'react'
-import { Link, animateScroll as scroll } from "react-scroll";
-// import {LinkContainer} from 'react-router-bootstrap'
+
+import {LinkContainer} from 'react-router-bootstrap'
 import {Nav,Navbar,Container} from 'react-bootstrap';
+import AnchorLink from 'react-anchor-link-smooth-scroll'
+
+
 const Header = () => {
     return (
         <header>
         <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect fixed="top">
-            {/* <LinkContainer to="/"> */}
-  <Navbar.Brand>ProShop</Navbar.Brand>
-  {/* </LinkContainer> */}
+          
+  {/* <Navbar.Brand>ProShop</Navbar.Brand> */}
+
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="ml-auto">
-    {/* <LinkContainer to="/cart"> */}
-      <Nav.Link><i className="fas fa-shopping-cart"></i>Cart
-      <Link
-    activeClass="active"
-    to="projects"
-    spy={true}
-    smooth={true}
-    offset={10}
-    duration={1000}
->
-  lokakak
-</Link>
-      </Nav.Link>
-      {/* </LinkContainer> */}
-      {/* <LinkContainer to="/login"> */}
-      <Nav.Link><i className="fas fa-user">
-        </i>Sign In</Nav.Link>
-      {/* </LinkContainer>  */}
+    <AnchorLink href='#about'>
+      <Nav.Link>About Me</Nav.Link>
+      </AnchorLink>
+    <AnchorLink href='#skills'>
+      <Nav.Link>Skills</Nav.Link>
+      </AnchorLink>
+    <AnchorLink href='#experiences'>
+      <Nav.Link>Experiences</Nav.Link>
+      </AnchorLink>
+    <AnchorLink href='#projects'>
+      <Nav.Link>Projects</Nav.Link>
+      </AnchorLink>
+    <AnchorLink href='#education'>
+      <Nav.Link>Education</Nav.Link>
+      </AnchorLink>
+    <AnchorLink href='#contact'>
+      <Nav.Link>Contact</Nav.Link>
+      </AnchorLink>
+     
+   
+   
+   
+   
+   
     </Nav>
    
   </Navbar.Collapse>
