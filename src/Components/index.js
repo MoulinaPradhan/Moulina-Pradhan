@@ -7,6 +7,7 @@ import Education from './Education'
 import Experiences from './Experiences'
 import ContactMeForm from './ContactMeForm'
 import Articles from './Articles'
+import ToggleMe from './ToggleMe.js'
 export  {Header,
     Projects,
     Skills,
@@ -15,4 +16,5 @@ export  {Header,
     Experiences,
     ContactMeForm,
     Articles,
+    ToggleMe,
 AboutMe};

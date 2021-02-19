@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import {Header,Experiences,ContactMe,AboutMe,Skills,Projects, Education,ContactMeForm,Articles} from './Components'
+import {Header,Experiences,ContactMe,AboutMe,Skills,Projects, Education,ContactMeForm,Articles,ToggleMe} from './Components'
 import {AnimatedOnScroll} from "react-animated-css-onscroll";
 
 import RellaxWrapper from 'react-rellax-wrapper'
@@ -12,7 +12,8 @@ import { SmoothProvider } from 'react-smooth-scrolling'
 
 import {RemoveScrollBar} from 'react-remove-scroll-bar';
 import PieChart from './Components/Pie Chart'
-
+// import Sticky from 'react-sticky-el';
+import { StickyContainer, Sticky } from 'react-sticky';
 
 function App() {
 
@@ -20,10 +21,10 @@ function App() {
     <div className="App">
    
       <Header/>
+      <ToggleMe/>
       <SmoothProvider skew={true} >
-     <AboutMe/>
-    
-    <AnimatedOnScroll animationIn="bounceDown" duration="1"> 
+     <AboutMe/> 
+   <AnimatedOnScroll animationIn="bounceDown" duration="1"> 
     <PieCharts/>
     </AnimatedOnScroll>
   
@@ -36,7 +37,8 @@ function App() {
     <AnimatedOnScroll animationIn="bounceInLeft" animationOut="fadeIn">
     <Education/>
     </AnimatedOnScroll>
-
+  
+    
    
     <ContactMe/>
 

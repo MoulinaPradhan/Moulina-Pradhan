@@ -4,7 +4,7 @@ import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import {Typography,Paper,Grid,createMuiTheme,Box, Container} from '@material-ui/core';
 import TextTransition, { presets } from "react-text-transition";
 import Typewriter from 'typewriter-effect';
-
+import ToggleMe from './ToggleMe'
 import RellaxWrapper from 'react-rellax-wrapper'
 const TEXTS = [
   "Forest",
