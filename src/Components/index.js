@@ -6,7 +6,7 @@ import ContactMe from './ContactMe'
 import Education from './Education'
 import Experiences from './Experiences'
 import ContactMeForm from './ContactMeForm'
-
+import Articles from './Articles'
 export  {Header,
     Projects,
     Skills,
@@ -14,4 +14,5 @@ export  {Header,
     Education,
     Experiences,
     ContactMeForm,
+    Articles,
 AboutMe};

@@ -1,3 +1,5 @@
 import FirebaseEcomerce from './FirebaseEcomerce'
 import CatchMeIfYouCan from './CatchMeIfYouCan'
-export { FirebaseEcomerce ,CatchMeIfYouCan}
+import Ipod from './Ipod'
+
+export { FirebaseEcomerce ,Ipod,CatchMeIfYouCan}

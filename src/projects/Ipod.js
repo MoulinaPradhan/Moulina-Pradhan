@@ -1,10 +1,11 @@
 import React, {useState} from 'react'
 import FlipCard from 'flip-card-react';
+import {Row,Col,Image} from 'react-bootstrap';
 import { Card, CardHeader,ImageHeader, CardBody, CardFooter } from 'react-simple-card'; 
 import {Avatar,Typography,List,Divider,ListItem,ListItemText,Link ,Grid,createMuiTheme,Box,Container,CardActions,CardMedia,CardContent,Button,CardActionArea} from '@material-ui/core';
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import ReactPlayer from 'react-player'
-import Emart from '../videos/Emart.mp4'
+import demo from '../videos/demo.mp4'
 import HoverVideoPlayer from 'react-hover-video-player';
 import Tilt from 'react-parallax-tilt';
 
@@ -16,7 +17,7 @@ const useStyles = makeStyles((theme) =>
   createStyles({
     root: {  maxWidth: 400,
       
-      height:500
+      height:500,
   },
     Links:{
 textDecoration:'none',
@@ -30,9 +31,9 @@ textDecoration:'none',
       // maxWidth: 400,
       display: "flex",
       height:500,
-      backgroundColor:"#4CBB17",
+      backgroundColor:"#EE3B3B",
       '&:hover': {
-        backgroundColor:"#308014"
+        backgroundColor:"#8E2323"
       },
     },
     heading: {
@@ -79,8 +80,7 @@ fontSize:'2rem'
   }),
 );
 
-
-const FirebaseEcomerce = () => {
+const Ipod = () => {
     const classes=useStyles();
     const [isFlipped, setFlipped] = useState(false);
 
@@ -89,13 +89,13 @@ const FirebaseEcomerce = () => {
       
         <Card className={classes.root}>
         <CardActionArea>
-        <HoverVideoPlayer fluid
+        <HoverVideoPlayer 
         className="player-wrapper"
         style={{
-          height:'auto',
+          height:'200px',
           display:isFlipped ? 'none' : ''
         }}
-        videoSrc={Emart}
+        videoSrc={demo}
         pausedOverlay={
           <img src="thumbnail-image.jpg" alt="" />
         }
@@ -105,14 +105,15 @@ const FirebaseEcomerce = () => {
       />
    
          
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-            Em@rt
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-            It's a shopping site🛒 with firebase authentication, feature of adding items to cart, deleting items from cart, changing the quantity and many more.
-            </Typography>
-          </CardContent>
+   <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            Mini Ipod
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+          About
+A simple ipod structure📱.that has cool features: 1)real-time-clock 2)a real calendar 3)you can play songs 4)watch videos with a trendy wheel.😊
+          </Typography>
+        </CardContent>
         </CardActionArea>
         <List component="nav">
       <ListItem button >
@@ -121,23 +122,24 @@ const FirebaseEcomerce = () => {
       </ListItem>
       <Divider />
       <ListItem button divider>
-        <ListItemText primary="Firestore" className={classes.listAlign}/>
+        <ListItemText primary="CSS" className={classes.listAlign}/>
       </ListItem>
       <ListItem button>
-        <ListItemText primary="Firebase-auth" className={classes.listAlign} />
+        <ListItemText primary="ZingTouch" className={classes.listAlign} />
       </ListItem>
     
     
     </List>
+
       </Card>
      
       </div>
       );
    
       const back = (
-          <div onClick={() => setFlipped(x => !x)}>
-            <Card className={classes.root}>
-            <CardActionArea >
+        <div onClick={() => setFlipped(x => !x)} >
+        <Card className={classes.root}>
+        <CardActionArea >
   <CardContent className={classes.backward} >
  
   <Grid container justify="center" alignItems="center" direction="column">
@@ -162,7 +164,7 @@ const FirebaseEcomerce = () => {
       </Card>
           </div>
       );
-  {/* */}
+
     return (
         <div>
             <FlipCard isFlipped={isFlipped} front={front} back={back}/>  
@@ -170,4 +172,4 @@ const FirebaseEcomerce = () => {
     )
 }
 
-export default FirebaseEcomerce
+export default Ipod

@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import FlipCard from 'flip-card-react';
 import {Row,Col,Image} from 'react-bootstrap';
 import { Card, CardHeader,ImageHeader, CardBody, CardFooter } from 'react-simple-card'; 
-import {Typography,Link ,Grid,createMuiTheme,Box,Container,CardActions,CardMedia,CardContent,Button,CardActionArea} from '@material-ui/core';
+import {Avatar,Typography,List,Divider,ListItem,ListItemText,Link ,Grid,createMuiTheme,Box,Container,CardActions,CardMedia,CardContent,Button,CardActionArea} from '@material-ui/core';
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
 import ReactPlayer from 'react-player'
 import CatchMe from '../videos/CatchMe.mp4'
@@ -15,7 +15,27 @@ const { breakpoints, typography: { pxToRem } } = defaultTheme
 
 const useStyles = makeStyles((theme) =>
   createStyles({
-    root: {  maxWidth: 345, height:400},
+    root: {  maxWidth: 400,
+      
+      height:500,
+  },
+    Links:{
+textDecoration:'none',
+'&:hover': {
+  textDecoration:'none',
+  color: 'transparent',
+   textShadow: '0 0 5px rgba(0,0,0,0.5)'
+},
+    },
+    backward:{
+      // maxWidth: 400,
+      display: "flex",
+      height:500,
+      backgroundColor:"#EE3B3B",
+      '&:hover': {
+        backgroundColor:"#8E2323"
+      },
+    },
     heading: {
       fontSize:50,
       textAlign:"center",
@@ -35,11 +55,25 @@ const useStyles = makeStyles((theme) =>
             marginTop: "15rem"
           },
     },
+    listAlign:{
+textAlign:"center"
+    },
     media: {
       height: 200,
       width:'100%',
     },
- 
+ GitLogo:{
+   width:'100px',
+   height:'100px',
+   marginBottom:'10px'
+   
+ },
+ projectView:{
+fontFamily:"Apple Color Emoji",
+textShadow:'4px 0px 1px black',
+color: "#FFFFFF",
+fontSize:'2rem'
+ },
     floatingText:{
         position:"absolute"
     }
@@ -80,40 +114,52 @@ const CatchMeIfYouCan = () => {
           </Typography>
         </CardContent>
         </CardActionArea>
-        <CardActions>
-        <Link  target="_blank" href="https://moulinapradhan.github.io/catch_me_sea_version/" color="inherit">
-      { "Project Link" }
-    </Link>
-  
-    <Link  target="_blank" href="https://moulinapradhan.github.io/catch_me_sea_version/" color="inherit">
-      { "Github" }
-    </Link>
-         
-        </CardActions>
+        <List component="nav">
+      <ListItem button >
+      <Divider />
+        <ListItemText  primary="HTML" className={classes.listAlign}/>
+      </ListItem>
+      <Divider />
+      <ListItem button divider>
+        <ListItemText primary="CSS" className={classes.listAlign}/>
+      </ListItem>
+      <ListItem button>
+        <ListItemText primary="JavaScript" className={classes.listAlign} />
+      </ListItem>
+    
+    
+    </List>
+
       </Card>
      
       </div>
       );
    
       const back = (
-          <div onClick={() => setFlipped(x => !x)}>
-            <Card className={classes.root}>
-        <CardActionArea>
-          
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
-              Lizard
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-              across all continents except Antarctica
-            </Typography>
-          </CardContent>
+        <div onClick={() => setFlipped(x => !x)} >
+        <Card className={classes.root}>
+        <CardActionArea >
+  <CardContent className={classes.backward} >
+ 
+  <Grid container justify="center" alignItems="center" direction="column">
+
+
+    <Grid item justifyContent="center"> 
+   <Link target="_blank" href="https://github.com/MoulinaPradhan/catch_me_sea_version"> <Avatar className={classes.GitLogo} src="https://www.flaticon.com/svg/vstatic/svg/2111/2111432.svg?token=exp=1613734720~hmac=daa579c848f64082186a7328896338de"/> 
+   </Link>
+</Grid>
+<Grid item>
+<Link className={classes.Links} href="https://moulinapradhan.github.io/catch_me_sea_version/" target="_blank" ><Typography  className={classes.projectView}>
+    View Project
+      </Typography>
+      </Link>
+</Grid>
+</Grid>
+ </CardContent>
         </CardActionArea>
         <CardActions>
-          
-        
-        </CardActions>
+      
+  </CardActions>
       </Card>
           </div>
       );

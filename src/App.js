@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import {Header,Experiences,ContactMe,AboutMe,Skills,Projects, Education,ContactMeForm} from './Components'
+import {Header,Experiences,ContactMe,AboutMe,Skills,Projects, Education,ContactMeForm,Articles} from './Components'
 import {AnimatedOnScroll} from "react-animated-css-onscroll";
 
 import RellaxWrapper from 'react-rellax-wrapper'
@@ -30,7 +30,8 @@ function App() {
   <Experiences/>
     <AnimatedOnScroll animationIn="bounceInUp">
     <Projects />
-    </AnimatedOnScroll>
+ </AnimatedOnScroll>
+    <Articles/>
     </SmoothProvider> 
     <AnimatedOnScroll animationIn="bounceInLeft" animationOut="fadeIn">
     <Education/>

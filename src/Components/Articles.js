@@ -8,7 +8,7 @@ import ReactPlayer from 'react-player'
 import demo from '../videos/demo.mp4'
 import HoverVideoPlayer from 'react-hover-video-player';
 import Tilt from 'react-parallax-tilt';
-import { FirebaseEcomerce, CatchMeIfYouCan,Ipod} from '../projects'
+import {BootsWatch, ReactDevTools} from '../helpers/articles'
 import Aos from 'aos';
 import "aos/dist/aos.css";
 import { Wave,Random } from 'react-animated-text';
@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) =>
       width:'100%',
     },
     startingPosition:{
-      marginTop:'10%'
+      marginTop:'40%'
   },
     floatingText:{
         position:"absolute"
@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) =>
 );
 
 
-const Projects = () => {
+const Articles = () => {
     const classes=useStyles();
     useEffect(() => {
       Aos.init({
@@ -65,10 +65,10 @@ const Projects = () => {
     return (
         <>   
         
-        <Container fluid data-aos="ease-in" id="projects" className={classes.startingPosition}>
+        <Container fluid data-aos="ease-in" id="articles" className={classes.startingPosition}>
         <h2 className={classes.heading}>
 <Random
-  text="Projects"
+  text="Articles"
  effect="pop"
   effectDirection="up"
   effectChange={0.6}
@@ -76,13 +76,10 @@ const Projects = () => {
 </h2>
 <Row className={classes.boxWidth}>
         <Col md={4} xs={12}>
-      <CatchMeIfYouCan/>
+      <ReactDevTools/>
        </Col>
        <Col md={4} xs={12}>
-       <FirebaseEcomerce/>
-         </Col>
-         <Col md={4} xs={12}>
-       <Ipod/>
+       <BootsWatch/>
          </Col>
         </Row>
 
@@ -92,4 +89,5 @@ const Projects = () => {
     )
 }
 
-export default Projects
+export default Articles
+
