@@ -16,12 +16,15 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import { Wave,Random } from 'react-animated-text';
 import {Link, Avatar} from '@material-ui/core'
+import Moulina from '../Images/moulina.jpeg'
 
 const defaultTheme = createMuiTheme({})
 const { breakpoints, typography: { pxToRem } } = defaultTheme
 const useStyles = makeStyles((theme) => ({
   paper: {
     padding: '6px 16px',
+    borderRadius:"1%",
+    backgroundImage: `url(https://image.freepik.com/free-photo/crumpled-paper-background_1373-412.jpg)`
   },
   heading: {
     fontSize:50,
@@ -37,7 +40,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.secondary.main,
   },
   startingPosition:{
-      marginTop:'-45%'
+      marginTop:'-45%',
+      // backgroundImage: `url(https://media3.giphy.com/media/aaTz9fnXkzoQ/giphy.gif?cid=ecf05e47ohnjpb3u78kihjqjcx1p46ie2j2gguvny7fh6drq&rid=giphy.gif)`
   }
 }));
 
@@ -68,7 +72,7 @@ export default function Education() {
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>
-          <Paper elevation={3} className={classes.paper}>
+          <Paper elevation={3} className={classes.paper} style={{backgroundImage:"https://image.freepik.com/free-photo/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg"}}>
           <Link  target="_blank" href="https://hithaldia.in/main/" color="inherit">
             <Typography variant="h6" component="h1"  color="primary" >
             Haldia Institute of Technology

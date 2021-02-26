@@ -38,7 +38,11 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.secondary.main,
   },
   startingPosition:{
-      marginTop:'10%'
+      marginTop:'10%',
+      backgroundImage: `url(https://i0.wp.com/codemyui.com/wp-content/uploads/2019/06/Shooting-Star-Background-in-Pure-CSS-1.gif?fit=880%2C440&ssl=1)`,
+    background:'linear-gradient',
+    backgroundRepeat:'no-repeat',
+    backgroundSize:"cover"
   }
 }));
 

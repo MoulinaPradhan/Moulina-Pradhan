@@ -6,12 +6,7 @@ import TextTransition, { presets } from "react-text-transition";
 import Typewriter from 'typewriter-effect';
 import ToggleMe from './ToggleMe'
 import RellaxWrapper from 'react-rellax-wrapper'
-const TEXTS = [
-  "Forest",
-  "Building",
-  "Tree",
-  "Color"
-];
+import {Helmet} from "react-helmet";
 
 
 const defaultTheme = createMuiTheme({})
@@ -62,6 +57,7 @@ const AboutMe = () => {
  
     return (
    <>
+   
 <Container id="about" className={classes.spacer}>
     <Grid container justify="flex-end" >
           <Grid item md={9} xs={12}>

@@ -1,14 +1,15 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import {Paper, Grid,TextField, Box} from '@material-ui/core';
-
+import '../bubble.css'
 import emailjs from 'emailjs-com';
 import ContactMeForm from './ContactMeForm';
 import Wave from 'react-wavify'
 import Snow from 'react-snow-effect'
 import ToggleAbout from '../helpers/ToggleAbout';
 import {Random } from 'react-animated-text';
-
+import {Helmet} from "react-helmet";
+ 
 
 
 const useStyles = makeStyles((theme) => ({
@@ -31,6 +32,10 @@ const useStyles = makeStyles((theme) => ({
   },
   startingPosition:{
     marginTop:'1%',
+    backgroundImage: `url(https://i0.wp.com/codemyui.com/wp-content/uploads/2019/06/Shooting-Star-Background-in-Pure-CSS-1.gif?fit=880%2C440&ssl=1)`,
+    background:'linear-gradient',
+    backgroundRepeat:'no-repeat',
+    backgroundSize:"cover"
   
 }
 }));
@@ -41,8 +46,9 @@ export default function ContactMe() {
   return (
     <div id="contact" className={classes.startingPosition}>
      <h2 className={classes.heading} align="center">
+
 <Random
-  text="Experiences"
+  text="Contact"
  effect="pop"
   effectDirection="up"
   effectChange={0.6}
@@ -52,13 +58,10 @@ export default function ContactMe() {
 
      
       <Grid md={12} className={classes.startingPosition}>
+     
       <ContactMeForm/>
+  
       
-     {/* <Box display="flex" flexDirection="row-reverse">
-        <Box>
- <ToggleAbout/>
-   </Box>
-   </Box> */}
          </Grid>   
     
     

@@ -9,10 +9,21 @@ class PieCharts extends Component {
         super(props);
 
         this.state = {
-            series: [44, 55, 41, 17, 15],
+            series: [44, 55, 41, 17, 15,12,9,5,4,8],
             options : {
-                // labels: ["Series 1", "Series 2", "Series 3", "Series 4", "Series 5"],
-                colors: ["#34c38f", "#556ee6","#f46a6a", "#50a5f1", "#f1b44c"],
+                labels: 
+                [ 'React',
+                'Redux',
+                'JavaScript',
+                'Java',
+                'DSA',
+                'HTML',
+                'CSS',
+                'MongoDB',
+                'Firebase',
+                'Node.js',
+                'Express.js'],
+                colors: ["#F153A7","#34c38f","#8DFF33", "#556ee6","#f46a6a", "#50a5f1", "#f1b44c","#FF5B33","#A453F1","#53F1EC","#ECF153"],
                 legend: {
                     show: true,
                     position: 'bottom',
@@ -21,7 +32,8 @@ class PieCharts extends Component {
                     floating: false,
                     fontSize: '25px',
                     offsetX: 0,
-                    offsetY: -20
+                    offsetY: -20,
+                   
                 },
                 responsive: [{
                    
@@ -31,7 +43,8 @@ class PieCharts extends Component {
                             height: 240
                         },
                         legend: {
-                            show: true
+                            show: true,
+                            color:"white"
                         },
                     }
                 }]

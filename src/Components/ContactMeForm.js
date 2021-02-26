@@ -9,10 +9,6 @@ import emailjs from 'emailjs-com';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    // "& .MuiTextField-root": {
-    //     margin: theme.spacing(1)
-    //   }
-
   },
   paper: {
     padding: theme.spacing(3),
@@ -28,6 +24,10 @@ const useStyles = makeStyles((theme) => ({
   },
   textarea: {
     resize: "both"
+  },
+  cardContent:{
+    // backgroundColor:'red',
+    backgroundImage:'https://image.freepik.com/free-photo/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg'
   }
 }));
 
@@ -53,24 +53,8 @@ export default function ContactMeForm() {
         className={classes.root}
         maxWidth="sm"
       >
-        
-        {/* <Box
-          mb={8}
-          display="flex"
-          justifyContent="center"
-        >
-         
-        </Box> */}
-        <Card className="login">
+        <Card className="login" style={{backgroundImage:"https://image.freepik.com/free-photo/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg"}}>
           <CardContent className={classes.cardContent}>
-            {/* <Box
-              alignItems="center"
-              display="flex"
-              justifyContent="space-between"
-              mb={1}
-            > */}
-              {/* use only demo */}
-
               <form
           noValidate
           onSubmit={sendEmail}
@@ -79,7 +63,6 @@ export default function ContactMeForm() {
           <TextField
           
             fullWidth
-            // autoFocus
           id="name"
             label="Name"
             margin="normal"

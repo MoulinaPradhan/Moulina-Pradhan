@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import './BackgroundColor.css'
+import './BackgroundColor.css'
 // import './dummy1.css'
 
 import App from './App';
