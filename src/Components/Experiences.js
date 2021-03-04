@@ -91,7 +91,10 @@ export default function Experiences() {
 
   return (
       <div  className={classes.startingPosition} id="experiences">
-<h2 className={classes.heading}>
+<h2 
+align="center"
+// className={classes.heading}
+>
 <Random
   text="Experiences"
  effect="pop"
@@ -100,7 +103,7 @@ export default function Experiences() {
 />
 </h2>
     <Timeline align="alternate">
-      <TimelineItem>
+      <TimelineItem xs={12}>
        
         <TimelineSeparator>
           <TimelineDot>
@@ -108,8 +111,8 @@ export default function Experiences() {
           </TimelineDot>
           <TimelineConnector />
         </TimelineSeparator>
-        <TimelineContent>
-          <Paper elevation={3} className={classes.paper}>
+        <TimelineContent xs={12}>
+          <Paper  elevation={3} className={classes.paper}>
           <Link  target="_blank" href="https://hithaldia.in/main/" color="inherit">
             <Typography variant="h6" component="h1"  color="primary" >
            Bipolar Factory

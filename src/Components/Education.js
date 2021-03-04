@@ -17,6 +17,7 @@ import Typography from '@material-ui/core/Typography';
 import { Wave,Random } from 'react-animated-text';
 import {Link, Avatar} from '@material-ui/core'
 import Moulina from '../Images/moulina.jpeg'
+import {AnimatedOnScroll} from "react-animated-css-onscroll";
 
 const defaultTheme = createMuiTheme({})
 const { breakpoints, typography: { pxToRem } } = defaultTheme
@@ -41,7 +42,8 @@ const useStyles = makeStyles((theme) => ({
   },
   startingPosition:{
       marginTop:'-45%',
-      // backgroundImage: `url(https://media3.giphy.com/media/aaTz9fnXkzoQ/giphy.gif?cid=ecf05e47ohnjpb3u78kihjqjcx1p46ie2j2gguvny7fh6drq&rid=giphy.gif)`
+      padding:'5%',
+      backgroundImage: ` linear-gradient(0deg, rgba(25,26,37,1) 14%, rgba(232,245,99,0.26094187675070024) 34%, rgba(232,254,98,0.196516106442577) 47%, rgba(229,91,110,0.2553396358543417) 55%, rgba(33,33,33,1) 93%);`
   }
 }));
 
@@ -58,6 +60,7 @@ export default function Education() {
   effectChange={0.6}
 />
 </h2>
+<AnimatedOnScroll animationIn="bounceInLeft" animationOut="fadeIn">
     <Timeline align="alternate">
       <TimelineItem>
         <TimelineOppositeContent>
@@ -119,6 +122,7 @@ export default function Education() {
       </TimelineItem>
      
     </Timeline>
+    </AnimatedOnScroll>
     </div>
   );
 }

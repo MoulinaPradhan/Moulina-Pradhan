@@ -11,7 +11,7 @@ import PieCharts from './Components/PieCharts';
 import { SmoothProvider } from 'react-smooth-scrolling'
 
 import {RemoveScrollBar} from 'react-remove-scroll-bar';
-import PieChart from './Components/Pie Chart'
+// import PieChart from './Components/Pie Chart'
 import { StickyContainer, Sticky } from 'react-sticky';
 import Loader from './Components/Loader';
 
@@ -41,9 +41,9 @@ function App() {
   </AnimatedOnScroll>
      <Articles/>
      </SmoothProvider> 
-     <AnimatedOnScroll animationIn="bounceInLeft" animationOut="fadeIn">
+     {/* <AnimatedOnScroll animationIn="bounceInLeft" animationOut="fadeIn"> */}
      <Education/>
-     </AnimatedOnScroll>
+     {/* </AnimatedOnScroll> */}
    
      
     

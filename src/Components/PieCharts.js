@@ -40,7 +40,7 @@ class PieCharts extends Component {
                     breakpoint: 600,
                     options: {
                         chart: {
-                            height: 240
+                            height: 640
                         },
                         legend: {
                             show: true,
