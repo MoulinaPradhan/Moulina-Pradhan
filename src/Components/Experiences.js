@@ -39,10 +39,12 @@ const useStyles = makeStyles((theme) => ({
   },
   startingPosition:{
       marginTop:'10%',
-      backgroundImage: `url(https://i0.wp.com/codemyui.com/wp-content/uploads/2019/06/Shooting-Star-Background-in-Pure-CSS-1.gif?fit=880%2C440&ssl=1)`,
-    background:'linear-gradient',
-    backgroundRepeat:'no-repeat',
-    backgroundSize:"cover"
+      padding:'5%',
+      backgroundImage: ` linear-gradient(0deg, rgba(25,26,37,0) 0%, rgba(25,27,37,0.10688025210084029) 0%, rgba(32,212,204,0.29175420168067223) 26%, rgba(98,254,252,0.196516106442577) 44%, rgba(193,67,88,0.22452731092436973) 76%, rgba(33,33,33,0.1741071428571429) 100%, rgba(33,33,33,0.2497373949579832) 100%);`
+    //   backgroundImage: `url(https://i0.wp.com/codemyui.com/wp-content/uploads/2019/06/Shooting-Star-Background-in-Pure-CSS-1.gif?fit=880%2C440&ssl=1)`,
+    // background:'linear-gradient',
+    // backgroundRepeat:'no-repeat',
+    // backgroundSize:"cover"
   }
 }));
 

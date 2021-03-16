@@ -1,10 +1,17 @@
 import React from 'react'
-
+import { withStyles } from '@material-ui/core/styles';
 import ReactContactForm from 'react-mail-form';
 import { makeStyles } from '@material-ui/core/styles';
 import {Paper, TextareaAutosize, Grid,TextField, Box,Link,CardContent,Typography,Divider,Container,Card,Button} from '@material-ui/core';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import emailjs from 'emailjs-com';
+import Dialog from '@material-ui/core/Dialog';
+import MuiDialogTitle from '@material-ui/core/DialogTitle';
+import MuiDialogContent from '@material-ui/core/DialogContent';
+import MuiDialogActions from '@material-ui/core/DialogActions';
+import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,9 +37,58 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage:'https://image.freepik.com/free-photo/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg'
   }
 }));
+const styles = (theme) => ({
+  root: {
+    margin: 0,
+    padding: theme.spacing(2),
+  },
+  closeButton: {
+    position: 'absolute',
+    right: theme.spacing(1),
+    top: theme.spacing(1),
+    color: theme.palette.grey[500],
+  },
+});
+const DialogTitle = withStyles(styles)((props) => {
+  const { children, classes, onClose, ...other } = props;
+  return (
+    <MuiDialogTitle disableTypography className={classes.root} {...other}>
+      <Typography variant="h6">{children}</Typography>
+      {onClose ? (
+        <IconButton aria-label="close" className={classes.closeButton} onClick={onClose}>
+          <CloseIcon />
+        </IconButton>
+      ) : null}
+    </MuiDialogTitle>
+  );
+});
+
+const DialogContent = withStyles((theme) => ({
+  root: {
+    padding: theme.spacing(2),
+  },
+}))(MuiDialogContent);
+
+const DialogActions = withStyles((theme) => ({
+  root: {
+    margin: 0,
+    padding: theme.spacing(1),
+  },
+}))(MuiDialogActions);
+
+
+ 
 
 export default function ContactMeForm() {
   const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   function sendEmail(e) {
     e.preventDefault();
@@ -80,63 +136,48 @@ export default function ContactMeForm() {
            id="subject"
            variant="outlined"
          />
-          <TextField
-          className={classes.textarea}
-            fullWidth
-            rows={2}
-            rowsMax={4}
-            label="Message"
-            margin="normal"
-            name="message"
-        
-     
-           id="message"
-      
-            variant="outlined"
-          />
-          {/* {errors.submit && (
-            <Box mt={3}>
-              <FormHelperText error>
-                {errors.submit}
-              </FormHelperText>
-            </Box>
-          )} */}
+         
+           <TextField
+          id="message"
+          label="Message"
+          margin="normal"
+          name="message"
+          fullWidth
+          multiline
+          rows={4}
+         
+          variant="outlined"
+        />
           <Box mt={2}>
             <Button
               color="secondary"
-             
               fullWidth
               size="large"
               type="submit"
               variant="contained"
               value="Create Email"
+              onClick={handleClickOpen}
             >
               Send
             </Button>
+
+    {/*diaglogue box*/}
+    <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
+       
+        <DialogContent dividers>
+          <Typography gutterBottom>
+          Thank You For Your Response
+          </Typography>
+        
+        </DialogContent>
+     </Dialog>
+           {/* */}
           </Box>
-          {/* <Box mt={2}>
-            <Alert
-              severity="info"
-            >
-              <div>
-                Use
-                {' '}
-                <b>demo@telacoach.com</b>
-                {' '}
-                and password
-                {' '}
-                <b>Password123</b>
-              </div>
-            </Alert>
-          </Box> */}
         </form>
-            {/* </Box> */}
-           
-            <Divider />
-     
-            <Box my={1} display="flex" justifyContent="center" >
+   <Divider />
+     <Box my={1} display="flex" justifyContent="center" >
               <Typography color="textSecondary">
-            Don't have an account yet?&nbsp;
+            Or just sent a mail to <a href="mailto:pmoulina76@gmail.com">pmoulina76@gmail.com</a>  
         
             </Typography>
             </Box>

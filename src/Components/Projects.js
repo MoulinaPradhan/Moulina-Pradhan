@@ -66,7 +66,7 @@ const Projects = () => {
         <>   
         
         <Container fluid data-aos="ease-in" id="projects" className={classes.startingPosition}>
-        <h2 className={classes.heading}>
+        <h2 align="center">
 <Random
   text="Projects"
  effect="pop"

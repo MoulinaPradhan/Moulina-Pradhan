@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
   startingPosition:{
       marginTop:'-45%',
       padding:'5%',
-      backgroundImage: ` linear-gradient(0deg, rgba(25,26,37,1) 14%, rgba(232,245,99,0.26094187675070024) 34%, rgba(232,254,98,0.196516106442577) 47%, rgba(229,91,110,0.2553396358543417) 55%, rgba(33,33,33,1) 93%);`
+      backgroundImage: ` linear-gradient(0deg, rgba(25,26,37,1) 14%, rgba(232,245,99,0.26094187675070024) 34%, rgba(232,254,98,0.196516106442577) 47%, rgba(229,91,110,0.2553396358543417) 55%, rgba(33,33,33,0.1741071428571429) 100%, rgba(33,33,33,0.2497373949579832) 100%);`
   }
 }));
 
