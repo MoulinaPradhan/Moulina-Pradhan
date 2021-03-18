@@ -1,5 +1,5 @@
 import React from 'react'
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles, createMuiTheme } from '@material-ui/core/styles';
 import ReactContactForm from 'react-mail-form';
 import { makeStyles } from '@material-ui/core/styles';
 import {Paper, TextareaAutosize, Grid,TextField, Box,Link,CardContent,Typography,Divider,Container,Card,Button} from '@material-ui/core';
@@ -12,7 +12,8 @@ import MuiDialogActions from '@material-ui/core/DialogActions';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 
-
+const defaultTheme = createMuiTheme({})
+  const { breakpoints, typography: { pxToRem } } = defaultTheme
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -26,21 +27,28 @@ const useStyles = makeStyles((theme) => ({
     color:'red'
   },
   background:{
-    backgroundColor:'lightgreen'
-    ,padding: theme.spacing(3),
+    backgroundColor:'lightgreen',
+    padding:theme.spacing(1),
+    fontSize:20,
+    fontFamily: "Roboto",
+    fontWeight:600,
+    [breakpoints.down("xs")]: {
+      fontSize: "1rem",
+     
+    },
+
   },
   textarea: {
     resize: "both"
   },
   cardContent:{
-    // backgroundColor:'red',
     backgroundImage:'https://image.freepik.com/free-photo/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg'
   }
 }));
 const styles = (theme) => ({
   root: {
     margin: 0,
-    padding: theme.spacing(2),
+    padding: theme.spacing(1),
   },
   closeButton: {
     position: 'absolute',
@@ -66,6 +74,7 @@ const DialogTitle = withStyles(styles)((props) => {
 const DialogContent = withStyles((theme) => ({
   root: {
     padding: theme.spacing(2),
+    backgroundColor:"lightgreen"
   },
 }))(MuiDialogContent);
 
@@ -82,7 +91,7 @@ const DialogActions = withStyles((theme) => ({
 export default function ContactMeForm() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
-
+  
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -162,15 +171,17 @@ export default function ContactMeForm() {
             </Button>
 
     {/*diaglogue box*/}
+
     <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
        
         <DialogContent dividers>
-          <Typography gutterBottom>
+          <Typography gutterBottom className={classes.background}>
           Thank You For Your Response
           </Typography>
         
         </DialogContent>
      </Dialog>
+
            {/* */}
           </Box>
         </form>
