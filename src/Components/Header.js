@@ -3,7 +3,7 @@ import { makeStyles,createMuiTheme } from '@material-ui/core/styles';
 import {LinkContainer} from 'react-router-bootstrap'
 import {Nav,Navbar,Container} from 'react-bootstrap';
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-
+import Portfolio from './MoulinaPradhan.pdf'
 const defaultTheme = createMuiTheme({})
 const { breakpoints, typography: { pxToRem } } = defaultTheme
 const useStyles = makeStyles((theme) => ({
@@ -12,13 +12,17 @@ const useStyles = makeStyles((theme) => ({
     borderRadius:"1%",
     backgroundImage: `url(https://image.freepik.com/free-photo/crumpled-paper-background_1373-412.jpg)`
   },
+  downloadButton:{
+color:"white",
+fontWeight:900,
+fontSize:'1.45rem'
+  },
  Links:{
 fontSize:20,
 color:"white"
  },
   startingPosition:{
       marginTop:'-45%',
-      // backgroundImage: `url(https://media3.giphy.com/media/aaTz9fnXkzoQ/giphy.gif?cid=ecf05e47ohnjpb3u78kihjqjcx1p46ie2j2gguvny7fh6drq&rid=giphy.gif)`
   }
 }));
 
@@ -28,7 +32,9 @@ const Header = () => {
         <header>
         <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect fixed="top">
           
-  {/* <Navbar.Brand>ProShop</Navbar.Brand> */}
+  <Navbar.Brand> 
+    <a href={Portfolio} className={classes.downloadButton} download>Resume <i class="fa fa-download"></i></a>
+    </Navbar.Brand>
 
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">

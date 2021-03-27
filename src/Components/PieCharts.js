@@ -11,6 +11,11 @@ class PieCharts extends Component {
         this.state = {
             series: [44, 55, 41, 17, 15,12,9,5,4,8],
             options : {
+                plotOptions: {
+                    pie: {
+                      expandOnClick: true
+                    }
+                },
                 labels: 
                 [ 'React',
                 'Redux',

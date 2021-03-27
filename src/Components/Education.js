@@ -28,23 +28,23 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: `url(https://image.freepik.com/free-photo/crumpled-paper-background_1373-412.jpg)`
   },
   heading: {
-    fontSize:50,
-    [breakpoints.down("xs")]: {
-      fontSize: "1rem"
-    },
     fontFamily: 'Raleway',
     fontStyle: 'normal',
     fontDisplay: 'swap',
-   textAlign:'center'
+   textAlign:'center',
+   marginTop:"-50%"
   },
   secondaryTail: {
     backgroundColor: theme.palette.secondary.main,
   },
   startingPosition:{
-      marginTop:'-45%',
+      marginTop:'-85rem',
       padding:'5%',
-      backgroundImage: ` linear-gradient(0deg, rgba(25,26,37,1) 14%, rgba(232,245,99,0.26094187675070024) 34%, rgba(232,254,98,0.196516106442577) 47%, rgba(229,91,110,0.2553396358543417) 55%, rgba(33,33,33,0.1741071428571429) 100%, rgba(33,33,33,0.2497373949579832) 100%);`
-  }
+      backgroundImage: ` linear-gradient(0deg, rgba(25,26,37,1) 14%, rgba(232,245,99,0.26094187675070024) 34%, rgba(232,254,98,0.196516106442577) 47%, rgba(229,91,110,0.2553396358543417) 55%, rgba(33,33,33,0.1741071428571429) 100%, rgba(33,33,33,0.2497373949579832) 100%);`,
+      [breakpoints.down("xs")]: {
+       marginTop:"-143rem"
+      },
+    }
 }));
 
 export default function Education() {
@@ -52,7 +52,7 @@ export default function Education() {
 
   return (
       <div  className={classes.startingPosition} id="education">
-           <h2 className={classes.heading}>
+  <h2 align="center">
 <Random
   text="Education"
  effect="pop"

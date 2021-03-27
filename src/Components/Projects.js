@@ -8,7 +8,7 @@ import ReactPlayer from 'react-player'
 import demo from '../videos/demo.mp4'
 import HoverVideoPlayer from 'react-hover-video-player';
 import Tilt from 'react-parallax-tilt';
-import { FirebaseEcomerce, CatchMeIfYouCan,Ipod} from '../projects'
+import { FirebaseEcomerce, ResumeProject,CatchMeIfYouCan,Ipod,ElectroBuzzProject} from '../projects'
 import Aos from 'aos';
 import "aos/dist/aos.css";
 import { Wave,Random } from 'react-animated-text';
@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) =>
         height:'1rem',
         marginTop:'5rem',
         [breakpoints.down("xs")]: {
-            marginTop: "15rem"
+            marginTop: "3rem"
           },
     },
     media: {
@@ -45,7 +45,8 @@ const useStyles = makeStyles((theme) =>
       width:'100%',
     },
     startingPosition:{
-      marginTop:'10%'
+      marginTop:'10%',
+
   },
     floatingText:{
         position:"absolute"
@@ -65,7 +66,7 @@ const Projects = () => {
     return (
         <>   
         
-        <Container fluid data-aos="ease-in" id="projects" className={classes.startingPosition}>
+  <Container fluid data-aos="ease-in" id="projects" className={classes.startingPosition}>
         <h2 align="center">
 <Random
   text="Projects"
@@ -75,6 +76,9 @@ const Projects = () => {
 />
 </h2>
 <Row className={classes.boxWidth}>
+<Col md={4} xs={12}>
+      <ElectroBuzzProject/>
+       </Col>
         <Col md={4} xs={12}>
       <CatchMeIfYouCan/>
        </Col>
@@ -83,6 +87,9 @@ const Projects = () => {
          </Col>
          <Col md={4} xs={12}>
        <Ipod/>
+         </Col>
+         <Col md={4} xs={12}>
+       <ResumeProject/>
          </Col>
         </Row>
 

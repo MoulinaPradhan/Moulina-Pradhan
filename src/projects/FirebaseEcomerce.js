@@ -71,7 +71,8 @@ textAlign:"center"
 fontFamily:"Apple Color Emoji",
 textShadow:'4px 0px 1px black',
 color: "#FFFFFF",
-fontSize:'2rem'
+fontSize:'2.5rem',
+fontWeight:900,
  },
     floatingText:{
         position:"absolute"
@@ -144,12 +145,12 @@ const FirebaseEcomerce = () => {
 
 
     <Grid item justifyContent="center"> 
-   <Link target="_blank" href="https://github.com/MoulinaPradhan/catch_me_sea_version"> <Avatar className={classes.GitLogo} src="https://www.flaticon.com/svg/vstatic/svg/2111/2111432.svg?token=exp=1613734720~hmac=daa579c848f64082186a7328896338de"/> 
+   <Link target="_blank" href="https://github.com/MoulinaPradhan/E-Mart"> <Avatar className={classes.GitLogo} src="https://www.flaticon.com/svg/vstatic/svg/2111/2111432.svg?token=exp=1616867980~hmac=0494e5ba09a58a94b61df219854a60c4"/> 
    </Link>
 </Grid>
 <Grid item>
-<Link className={classes.Links} href="https://moulinapradhan.github.io/catch_me_sea_version/" target="_blank" ><Typography  className={classes.projectView}>
-    View Project
+<Link className={classes.Links} href="https://xenodochial-khorana-f251f9.netlify.app/" target="_blank" ><Typography  className={classes.projectView}>
+ Visit Site
       </Typography>
       </Link>
 </Grid>

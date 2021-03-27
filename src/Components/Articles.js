@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) =>
         height:'1rem',
         marginTop:'5rem',
         [breakpoints.down("xs")]: {
-            marginTop: "15rem"
+            marginTop: "3rem"
           },
     },
     media: {
@@ -45,7 +45,10 @@ const useStyles = makeStyles((theme) =>
       width:'100%',
     },
     startingPosition:{
-      marginTop:'40%'
+      marginTop:'80%',
+      [breakpoints.down("xs")]: {
+        marginTop: "160rem"
+      },
   },
     floatingText:{
         position:"absolute"
@@ -65,8 +68,9 @@ const Articles = () => {
     return (
         <>   
         
-        <Container fluid data-aos="ease-in" id="articles" className={classes.startingPosition}>
-        <h2 className={classes.heading}>
+  <Container fluid data-aos="ease-in" id="articles" className={classes.startingPosition}>
+  <h2 align="center">
+
 <Random
   text="Articles"
  effect="pop"
