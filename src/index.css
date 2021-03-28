@@ -6,9 +6,29 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden !important;
-
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+::-webkit-scrollbar {
+  width: 10px;
 }
 
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:radial-gradient(circle, rgba(131,37,81,1) 30%, rgba(5,246,142,0.6138830532212884) 100%, rgba(0,212,255,1) 100%);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -57,11 +77,9 @@ code {
 
   top:0;
   left:0;
-
   width: 100%;
   height: 100%;
-  /* background:rgba(255,255,255,0.5); */
-  background-image: url("https://i.pinimg.com/originals/cc/b0/1c/ccb01c058068c3e2a09c9fb751299297.gif");
+  background-image: url("https://cdn.dribbble.com/users/1112522/screenshots/5284043/space-rocket-dribbble.gif");
  background-repeat: no-repeat;
  background-size: cover;
  background-position: center center;
