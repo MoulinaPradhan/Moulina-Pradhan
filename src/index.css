@@ -21,7 +21,7 @@ body {
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background:radial-gradient(circle, rgba(131,37,81,1) 30%, rgba(5,246,142,0.6138830532212884) 100%, rgba(0,212,255,1) 100%);
+  background:radial-gradient(circle, rgba(151,219,101,0.8239670868347339) 34%, rgba(191,222,23,1) 64%);
   border-radius: 10px;
 }
 
