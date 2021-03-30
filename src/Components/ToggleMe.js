@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
       },
   },
   GitHub:{
-      top:'170px',
+      top:'180px',
       
       left:'100px',
       boxShadow: `1px 0px 20px 2px #000000f2;`,

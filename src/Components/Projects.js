@@ -80,13 +80,14 @@ const Projects = () => {
       <ElectroBuzzProject/>
        </Col>
         <Col md={4} xs={12}>
-      <CatchMeIfYouCan/>
+        <Ipod/>
        </Col>
        <Col md={4} xs={12}>
        <FirebaseEcomerce/>
          </Col>
          <Col md={4} xs={12}>
-       <Ipod/>
+         <CatchMeIfYouCan/>
+     
          </Col>
          <Col md={4} xs={12}>
        <ResumeProject/>

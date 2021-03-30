@@ -9,7 +9,7 @@ class PieCharts extends Component {
         super(props);
 
         this.state = {
-            series: [44, 55, 41, 17, 15,12,9,5,4,8],
+            series: [55, 30, 25, 55, 45,55,50,15,19,18,25],
             options : {
                 plotOptions: {
                     pie: {

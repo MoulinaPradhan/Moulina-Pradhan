@@ -63,22 +63,14 @@ const AboutMe = () => {
           <Grid item md={9} xs={12}>
           <Typography className={classes.body}>Hi <br/>
               My name is <span className={classes.spanText}>Moulina Pradhan</span>, I'm a <span className={classes.spanText}>second</span> year student, persuing <span className={classes.spanText}>B.Tech </span>in <span className={classes.spanText}>Information Technology</span> from <span className={classes.spanText}>Haldia Institute of Technology.</span>  <br/>            
-              I have worked as a  <span className={classes.spanText}>Frontend (React.js) Developer intern</span>  for more than  <span className={classes.spanText}>2.5 months</span>.<br/>
-              I have solved around  <span className={classes.spanText}> 160+</span> questions at  <span className={classes.spanText}>GeeksForGeeks</span> and  around  <span className={classes.spanText}>160+ </span>questions on  <span className={classes.spanText}> Leetecode</span>.
-              I love sharing my knowledge so I also contribute<span className={classes.spanText}> articles</span> on <span className={classes.spanText}>GeeksForGeeks.</span>
+              I have worked as a  <span className={classes.spanText}>Frontend (React.js) Developer intern</span>  for <span className={classes.spanText}>2.5 months</span>.<br/>
+              I have solved around <span className={classes.spanText}> 300+</span> questions on  <span className={classes.spanText}>LeetCode</span> and  have scored  <span className={classes.spanText}>250+ </span> on  <span className={classes.spanText}> GeeksForGeeks</span>.
+              I have also written few<span className={classes.spanText}> articles</span> on <span className={classes.spanText}>GeeksForGeeks.</span>
                </Typography>
           </Grid>
           </Grid> 
     
-    {/* <h2 align="center">
-  <Typewriter
-  options={{
-    strings: ['A Learner', 'MERN Stack Developer'],
-    autoStart: true,
-    loop: true,
-  }}
-/>
-</h2> */}
+ 
   
             
     

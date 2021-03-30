@@ -27,16 +27,22 @@ const useStyles = makeStyles((theme) => ({
     color:'red'
   },
   background:{
-    backgroundColor:'lightgreen',
+    backgroundColor:'#39BD3D',
     padding:theme.spacing(1),
     fontSize:20,
+    fontWeight:800,
     fontFamily: "Roboto",
-    fontWeight:600,
+    textAlign:"center",
+  color:"white",
     [breakpoints.down("xs")]: {
       fontSize: "1rem",
      
     },
 
+  },
+  spanText:{
+    fontSize:17,
+    color:"#F9FABD"
   },
   textarea: {
     resize: "both"
@@ -56,6 +62,7 @@ const styles = (theme) => ({
     top: theme.spacing(1),
     color: theme.palette.grey[500],
   },
+
 });
 const DialogTitle = withStyles(styles)((props) => {
   const { children, classes, onClose, ...other } = props;
@@ -74,7 +81,7 @@ const DialogTitle = withStyles(styles)((props) => {
 const DialogContent = withStyles((theme) => ({
   root: {
     padding: theme.spacing(2),
-    backgroundColor:"lightgreen"
+    backgroundColor:"#39BD3D"
   },
 }))(MuiDialogContent);
 
@@ -175,9 +182,11 @@ export default function ContactMeForm() {
     <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
        
         <DialogContent dividers>
-          <Typography gutterBottom className={classes.background}>
-          Thank You For Your Response
+          <Typography  className={classes.background}>
+          Message Sent !<br/>
+          <span className={classes.spanText}>Get back to you soon ..</span>
           </Typography>
+         
         
         </DialogContent>
      </Dialog>
@@ -188,7 +197,7 @@ export default function ContactMeForm() {
    <Divider />
      <Box my={1} display="flex" justifyContent="center" >
               <Typography color="textSecondary">
-            Or just sent a mail to <a href="mailto:pmoulina76@gmail.com">pmoulina76@gmail.com</a>  
+            Or mail to <a href="mailto:pmoulina76@gmail.com">pmoulina76@gmail.com</a>  
         
             </Typography>
             </Box>

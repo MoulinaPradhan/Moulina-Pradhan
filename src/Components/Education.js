@@ -85,7 +85,7 @@ export default function Education() {
             <Typography>I'm an undergraduate student at Haldia Institute of Technology. 
                 I am currently Pursuing Bachelor of Technology in Information Technology.</Typography>
                 <br/>
-                Graduated 1st year with aggregate of 8.74 GPA(Here)
+                Graduated 1st year with aggregate of 8.74 GPA
           </Paper>
         </TimelineContent>
       </TimelineItem>
