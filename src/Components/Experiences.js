@@ -135,7 +135,7 @@ align="center"
          </StyledBadge>
                    
                   <ListItemText
-                    primary="Worked on a real life project named Telacoach"
+                    primary="Worked on a live project named Telacoach in a team"
                     secondary={secondary ? 'Secondary text' : null}
                   />
                 </ListItem>
@@ -152,7 +152,7 @@ align="center"
          </StyledBadge>
                    
                   <ListItemText
-                    primary="Worked on a react project with TypeScript"
+                    primary="Worked in TypeScript, learned to write code in TypeScript with react."
                     secondary={secondary ? 'Secondary text' : null}
                   />
                 </ListItem>
@@ -169,7 +169,7 @@ align="center"
          </StyledBadge>
                    
                   <ListItemText
-                    primary="Learn how to write clean code with proper folder structure."
+                    primary="Learnt to write clean code with proper folder structure.Got familiar Git and GitHub."
                     secondary={secondary ? 'Secondary text' : null}
                   />
                 </ListItem>
@@ -185,7 +185,7 @@ align="center"
          </StyledBadge>
                    
                   <ListItemText
-                    primary="Learn to make Api and lerant to use Postman and lerant git command"
+                    primary="Learnt about Api, creating apis and  learnt more about backend and its tools."
                     secondary={secondary ? 'Secondary text' : null}
                   />
                 </ListItem>
@@ -202,7 +202,7 @@ align="center"
          </StyledBadge>
                    
                   <ListItemText
-                    primary="Learnt to work in a team, had experience with morning scrum."
+                    primary="Learnt to work in a team, had experience with morning scrums, pressure managements."
                     secondary={secondary ? 'Secondary text' : null}
                   />
                 </ListItem>
@@ -242,11 +242,11 @@ align="center"
          </StyledBadge>
                    
                   <ListItemText
-                    primary="Worked on a real life project to integrate SAWO Api"
+                    primary="Our Initial Concept Document was selected among 240+ participates, making it to the finals."
                     secondary={secondary ? 'Secondary text' : null}
                   />
                 </ListItem>
-                <ListItem>
+                {/* <ListItem>
                <StyledBadge
         overlap="circle"
         anchorOrigin={{
@@ -258,10 +258,10 @@ align="center"
          </StyledBadge>
                    
                   <ListItemText
-                    primary="Our Initial Concept Document was selected among 240+ participate all over India"
+                    primary="Contributed as a team, learned about the concepts of OTP."
                     secondary={secondary ? 'Secondary text' : null}
                   />
-                </ListItem>
+                </ListItem> */}
 
           </Paper>
         </TimelineContent>

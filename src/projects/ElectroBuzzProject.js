@@ -23,8 +23,8 @@ const useStyles = makeStyles((theme) =>
    textDecoration:'none',
    fontWeight:900,
 '&:hover': {
-  textDecoration:'none',
-  color: 'transparent',
+  // textDecoration:'none',
+  color: 'white',
    textShadow: '0 0 5px rgba(0,0,0,0.5)'
 },
     },

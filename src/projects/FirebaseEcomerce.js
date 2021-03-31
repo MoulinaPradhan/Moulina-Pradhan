@@ -18,13 +18,14 @@ const useStyles = makeStyles((theme) =>
       
       height:500
   },
-    Links:{
-textDecoration:'none',
-'&:hover': {
-  textDecoration:'none',
-  color: 'transparent',
-   textShadow: '0 0 5px rgba(0,0,0,0.5)'
-},
+  Links:{
+    textDecoration:'none',
+    fontWeight:900,
+ '&:hover': {
+   // textDecoration:'none',
+   color: 'white',
+    textShadow: '0 0 5px rgba(0,0,0,0.5)'
+ },
     },
     backward:{
       // maxWidth: 400,
